@@ -4,4 +4,4 @@ export const getworkout = () => {
             .then(res => res.json())
             .then(data => dispatch({type: "FETCH_GYM_SUCCESS", payload: data }))
     }
-}
+} 
