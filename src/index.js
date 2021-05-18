@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { createStore, applyMiddleware} from 'redux'
-import thunk from 'redux-thunk'
-import { provider } from 'react-redux'
-
+import store from "./redux/store";
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
   <React.StrictMode>
-    <provider>
+    <Provider store = {store}>
     <App />
-    </provider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 ); 
