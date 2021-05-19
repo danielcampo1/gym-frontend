@@ -1,16 +1,30 @@
 import React from 'react'
-import workoutsForm from '../components/workoutsForm'
+import { connect } from 'react-redux'
+import WorkoutsForm from '../components/workoutsForm'
+import { getWorkout } from '../redux/actions/gymAction'
 
 
 
 class WorkoutContainer extends React.Component {
 
+    componentDidMount(){
+        this.props.getWorkout()
+    }
+
 render() {
     return(
         <div>
-            
+            <WorkoutsForm gymWorkouts={this.props.gymWorkouts} />
         </div>
-    )
+        )
+    }
 }
 
-export default WorkoutContainer
+const mapStateToProps = state => {
+    return {
+        gymWorkouts: state.gymWorkouts
+        }
+    }
+
+
+export default connect(mapStateToProps, {getWorkout})(WorkoutContainer)
