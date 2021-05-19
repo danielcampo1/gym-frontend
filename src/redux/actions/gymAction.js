@@ -1,4 +1,4 @@
-export const getworkout = () => {
+export const getWorkout = () => {
     return (dispatch) => {
             fetch("http://localhost:3000/workouts")
             .then(res => res.json())
