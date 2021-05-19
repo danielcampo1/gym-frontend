@@ -19,13 +19,32 @@ class WorkoutsForm extends React.Component {
             <div>
                 <h1> Create a workout plan! </h1>
                 <form>
-                    <input
+                    Muscle group: <input
                      name = 'muscle_group'
                      onChange = {this.handleChange}
                      value = { this.state.value}
-                    />
+                     placeholder = 'Arms,Shoulder,ETC...'
+                    /><br />
+                    Day of the Week: <input
+                     name = 'day'
+                     onChange = {this.handleChange}
+                     value = { this.state.value}
+                     placeholder = 'Mon,Tues ...'
+                    /><br />
+                    Name of workout: <input
+                     name = 'name'
+                     onChange = {this.handleChange}
+                     value = { this.state.value}
+                     placeholder = 'Bench press ...'
+                    /><br />
+                    Duration of workout: <input
+                     name = 'duration'
+                     onChange = {this.handleChange}
+                     value = { this.state.value}
+                     placeholder = '5 mins, 10 reps ... '
+                    /><br />
+                    <button type = "submit"> Submit your workout</button>
                 </form>
-                {/* {this.props.gymWorkouts.map(workouts => <li> {workouts.plan.goal} </li>)} */}
             </div>
         )
     }
