@@ -16,7 +16,7 @@ render() {
     return(
         <div>
             <WorkoutPlan gymWorkouts={this.props.gymWorkouts} />
-            <WorkoutsForm gymWorkouts={this.props.gymWorkouts} />
+            <WorkoutsForm />
         </div>
         )
     }
