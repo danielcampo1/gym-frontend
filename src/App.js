@@ -2,6 +2,7 @@ import React from 'react'
 import  WorkoutContainer from './containers/workoutContainer'
 import home from './components/home'
 import { Switch, Route } from "react-router-dom";
+import workoutContainer from './containers/workoutContainer';
 
 class App extends React.Component {
   
@@ -12,7 +13,7 @@ class App extends React.Component {
       <div className="App">
         <Switch>
         <Route exact path = '/' component={home} />
-        <Route exact path='/workoutPlan' container={WorkoutContainer}/>
+        <Route exact path='/workoutplan' component={WorkoutContainer} />
         </Switch>
       </div>
     );
