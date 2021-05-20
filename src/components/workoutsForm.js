@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import { createWorkout } from '../redux/actions/gymAction'
 
 class WorkoutsForm extends React.Component {
 
@@ -14,11 +16,16 @@ class WorkoutsForm extends React.Component {
         this.setState({ [e.target.name]: e.target.value})
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault()
+        this.props.createWorkout(this.state)
+    }
+
     render() {
         return(
             <div>
                 <h1> Create a workout plan! </h1>
-                <form>
+                <form onSubmit = {this.handleSubmit}>
                     Muscle group: <input
                      name = 'muscle_group'
                      onChange = {this.handleChange}
@@ -50,4 +57,4 @@ class WorkoutsForm extends React.Component {
     }
 }
 
-export default WorkoutsForm
+export default connect (null, { createWorkout })(WorkoutsForm)
