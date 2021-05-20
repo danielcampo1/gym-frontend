@@ -15,7 +15,7 @@ class WorkoutContainer extends React.Component {
 render() {
     return(
         <div>
-            <WorkoutPlan gymWorkouts={this.props.gymWorkouts} />
+            <WorkoutPlan workout={this.props.gymWorkouts} />
             <WorkoutsForm />
         </div>
         )
