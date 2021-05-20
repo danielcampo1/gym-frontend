@@ -26,25 +26,45 @@ class WorkoutsForm extends React.Component {
             <div>
                 <h1> Create a workout plan! </h1>
                 <form onSubmit = {this.handleSubmit}>
-                    Muscle group: <input
+
+                    <label for="Goal">Goal: </label> 
+                    <input
+                    id='Goal'
+                    name = 'goal'
+                    onChange = {this.handleChange}
+                    value = {this.state.value} 
+                    placeholder = "Loss weight ..."/><br/> <br/> <br/> 
+
+                    <label for="muscle_group">Muscle group: </label>
+                    <input
+                    id='muscle_group'
                      name = 'muscle_group'
                      onChange = {this.handleChange}
                      value = { this.state.value}
                      placeholder = 'Arms,Shoulder,ETC...'
                     /><br />
-                    Day of the Week: <input
+
+                    <label for="day_of_the_week">Day of the week: </label>
+                    <input
+                    id='day_of_the_week'
                      name = 'day'
                      onChange = {this.handleChange}
                      value = { this.state.value}
                      placeholder = 'Mon,Tues ...'
                     /><br />
-                    Name of workout: <input
+
+                    <label for="name_of_workout">Name of workout: </label>
+                    <input
+                    id='name_of_workout'
                      name = 'name'
                      onChange = {this.handleChange}
                      value = { this.state.value}
                      placeholder = 'Bench press ...'
                     /><br />
-                    Duration of workout: <input
+                    
+                    <label for="duration">Duration: </label>
+                    <input
+                    id='duration'
                      name = 'duration'
                      onChange = {this.handleChange}
                      value = { this.state.value}
