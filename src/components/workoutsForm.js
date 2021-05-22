@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { createWorkout } from '../redux/actions/gymAction'
+import { createPlan } from '../redux/actions/gymAction'
 
 class WorkoutsForm extends React.Component {
 
@@ -61,7 +61,7 @@ class WorkoutsForm extends React.Component {
                      value = { this.state.value}
                      placeholder = 'Bench press ...'
                     /><br />
-                    
+
                     <label for="duration">Duration: </label>
                     <input
                     id='duration'
@@ -77,4 +77,4 @@ class WorkoutsForm extends React.Component {
     }
 }
 
-export default connect (null, { createWorkout })(WorkoutsForm)
+export default connect (null, { createPlan })(WorkoutsForm)
