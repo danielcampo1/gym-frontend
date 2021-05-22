@@ -1,6 +1,6 @@
 export const getPlan = () => {
     return (dispatch) => {
-            fetch(`http://localhost:3000/plans`)
+            fetch("http://localhost:3000/plans")
             .then(res => res.json())
             .then(data => dispatch({type: "FETCH_PLAN_SUCCESS", payload: data }))
     }
