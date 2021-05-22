@@ -4,6 +4,7 @@ import WorkoutsForm from '../components/workoutsForm'
 import WorkoutPlan from '../components/workoutPlan'
 import { getPlan } from '../redux/actions/gymAction'
 import WorkoutsExercise from '../components/workoutExercise'
+import { Route } from 'react-router-dom'
 
 
 
@@ -16,6 +17,7 @@ class WorkoutContainer extends React.Component {
 render() {
     return(
         <div>
+            <Route path='plan/new' Component={WorkoutsForm} />
             <WorkoutPlan workout={this.props.plan} />
             <WorkoutsExercise workout={this.props.plan} />
             <WorkoutsForm />
