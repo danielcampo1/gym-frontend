@@ -5,6 +5,7 @@ import { createPlan } from '../redux/actions/gymAction'
 class WorkoutsForm extends React.Component {
 
     state = {
+        goal: "",
         muscle_group: "",
         day: "",
         name: "",
@@ -18,7 +19,7 @@ class WorkoutsForm extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        this.props.createWorkout(this.state)
+        this.props.createPlan(this.state)
     }
 
     render() {
