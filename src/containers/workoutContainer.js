@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import WorkoutsForm from '../components/workoutsForm'
 import WorkoutPlan from '../components/workoutPlan'
-import { getWorkout } from '../redux/actions/gymAction'
+import { getPlan } from '../redux/actions/gymAction'
 import WorkoutsExercise from '../components/workoutExercise'
 
 
@@ -10,14 +10,14 @@ import WorkoutsExercise from '../components/workoutExercise'
 class WorkoutContainer extends React.Component {
 
     componentDidMount(){
-        this.props.getWorkout()
+        this.props.getPlan()
     }
 
 render() {
     return(
         <div>
-            <WorkoutPlan workout={this.props.gymWorkouts} />
-            <WorkoutsExercise workout={this.props.gymWorkouts} />
+            <WorkoutPlan workout={this.props.plan} />
+            <WorkoutsExercise workout={this.props.plan} />
             <WorkoutsForm />
         </div>
         )
@@ -26,9 +26,9 @@ render() {
 
 const mapStateToProps = state => {
     return {
-        gymWorkouts: state.gymWorkouts
+        plan: state
         }
     }
 
 
-export default connect(mapStateToProps, {getWorkout})(WorkoutContainer)
+export default connect(mapStateToProps, {getPlan})(WorkoutContainer)
