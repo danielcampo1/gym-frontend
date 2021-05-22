@@ -14,16 +14,9 @@ export const createPlan = (newPlanData) => {
             Accepts: "application/json",
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ Plan: newPlanData }),
+        body: JSON.stringify({ plan: newPlanData }),
         })
-    // .then((res) => res.json())
-    .then((res) => {
-        if (res.ok) {
-          return res.json();
-        } else {
-          throw new Error(res.statusText);
-        }
-      })
+    .then((res) => res.json())
     .then((data) => dispatch({ type: "CREATE_PLAN_SUCCESS", payload: data }))
     }
 }   
