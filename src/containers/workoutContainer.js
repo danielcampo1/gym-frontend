@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import WorkoutsForm from '../components/workoutsForm'
 import WorkoutPlan from '../components/workoutPlan'
 import { getWorkout } from '../redux/actions/gymAction'
+import WorkoutsExercise from '../components/workoutExercise'
 
 
 
@@ -16,6 +17,7 @@ render() {
     return(
         <div>
             <WorkoutPlan workout={this.props.gymWorkouts} />
+            <WorkoutsExercise workout={this.props.gymWorkouts} />
             <WorkoutsForm />
         </div>
         )
