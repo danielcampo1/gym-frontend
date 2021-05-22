@@ -6,10 +6,11 @@ class WorkoutsPlan extends React.Component {
     render() {
         return(
             <div>
-                {this.props.workout.map(workouts => <li key={workouts.plan.id}> {workouts.plan.goal} </li>)}
+                {this.props.workout.map(plan => 
+                    <li key={plan.id}> {plan.goal}</li>
+                        )}
             </div>
-        )
-    }
-}
+        )}
+     }
 
 export default WorkoutsPlan
