@@ -1,7 +1,5 @@
 import React from 'react'
 import  WorkoutContainer from './containers/workoutContainer'
-import home from './components/home'
-import { Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
   
@@ -10,10 +8,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Switch>
-        <Route exact path = '/' component={home} />
-        <Route exact path='/workoutplan' component={WorkoutContainer} />
-        </Switch>
+      <WorkoutContainer />
       </div>
     );
   }
