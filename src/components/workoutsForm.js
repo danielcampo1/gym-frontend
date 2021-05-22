@@ -6,10 +6,10 @@ class WorkoutsForm extends React.Component {
 
     state = {
         goal: "",
-        muscle_group: "",
-        day: "",
-        name: "",
-        duration: "",
+        // muscle_group: "",
+        // day: "",
+        // name: "",
+        // duration: "",
     }
 
 
@@ -25,7 +25,7 @@ class WorkoutsForm extends React.Component {
     render() {
         return(
             <div>
-                <h1> Create a workout plan! </h1>
+                <h1> What the plan! </h1>
                 <form onSubmit = {this.handleSubmit}>
 
                     <label for="Goal">Goal: </label> 
@@ -35,7 +35,7 @@ class WorkoutsForm extends React.Component {
                     onChange = {this.handleChange}
                     value = {this.state.value} 
                     placeholder = "Loss weight ..."/><br/> <br/> <br/> 
-
+{/* 
                     <label for="muscle_group">Muscle group: </label>
                     <input
                     id='muscle_group'
@@ -70,8 +70,8 @@ class WorkoutsForm extends React.Component {
                      onChange = {this.handleChange}
                      value = { this.state.value}
                      placeholder = '5 mins, 10 reps ... '
-                    /><br />
-                    <button type = "submit"> Submit your workout</button>
+                    /><br /> */}
+                    <button type = "submit"> Submit your plan</button>
                 </form>
             </div>
         )
