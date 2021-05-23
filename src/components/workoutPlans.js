@@ -1,5 +1,5 @@
 import React from 'react'
-import Plan from './Plan'
+import {Link} from 'react-router-dom'
 
 class WorkoutsPlans extends React.Component {
 
@@ -8,7 +8,9 @@ class WorkoutsPlans extends React.Component {
         return(
             <div>
                 {this.props.workout.map(plan => 
-                    <div key={plan.id}> <Plan workout={plan}/></div>
+                    <li key={plan.id}> 
+                    <Link to={`/plans/${plan.id}`}> {plan.goal} </Link> 
+                    </li>
                         )}
             </div>
         )}
