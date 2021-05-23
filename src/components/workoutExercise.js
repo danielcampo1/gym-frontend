@@ -1,12 +1,13 @@
 import React from 'react'
 
-class WorkoutsExercise extends React.Component {
+class WorkoutExercise extends React.Component {
 
 
     render() {
+
         return(
             <div>
-                {/* {this.props.workout.map(workouts =>  
+                 {this.props.workout && this.props.workout.map(workouts =>  
                 <ul key={workouts.id}> 
                     <p> {workouts.muscle_group} </p> 
                     <p> {workouts.day} </p>
@@ -14,9 +15,9 @@ class WorkoutsExercise extends React.Component {
                     <p> {workouts.duration}</p>
                 </ul> 
              
-                )} */}
+                )} 
     </div>
     )
 }}
 
-export default WorkoutsExercise
+export default WorkoutExercise

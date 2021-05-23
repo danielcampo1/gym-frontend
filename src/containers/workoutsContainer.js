@@ -1,12 +1,15 @@
 import React from 'react'
+import WorkoutExercise from '../components/workoutExercise'
+import WorkoutForm from '../components/workoutForm'
 
 
-class WorkoutContainer extends React.Component {
+class WorkoutsContainer extends React.Component {
 
 render() {
     return(
         <div>
-            
+            <WorkoutForm/>
+            <WorkoutExercise workout={this.props.workout && this.props.workout.workouts} />
         </div>
     )
 }
@@ -15,4 +18,4 @@ render() {
 
 }
 
-export default WorkoutContainer
+export default WorkoutsContainer
