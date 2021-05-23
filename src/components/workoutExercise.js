@@ -12,9 +12,9 @@ class WorkoutsExercise extends React.Component {
                     <p> {workouts.day} </p>
                     <p> {workouts.name}</p>
                     <p> {workouts.duration}</p>
-                </ul> */}
-            {/* )   
-        } */}
+                </ul> 
+             
+                )} */}
     </div>
     )
 }}
