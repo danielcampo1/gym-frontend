@@ -1,10 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import WorkoutsForm from '../components/workoutsForm'
-import WorkoutPlan from '../components/workoutPlan'
-import { getPlan } from '../redux/actions/gymAction'
-import WorkoutsExercise from '../components/workoutExercise'
 import { Route } from 'react-router-dom'
+import { getPlan } from '../redux/actions/gymAction'
+import WorkoutsForm from '../components/workoutsForm'
+import WorkoutPlans from '../components/workoutPlans'
+import Plan from '../components/Plan'
+import WorkoutsExercise from '../components/workoutExercise'
 
 
 
@@ -17,10 +18,9 @@ class WorkoutContainer extends React.Component {
 render() {
     return(
         <div>
-            <Route path='plan/new' Component={WorkoutsForm} />
-            <WorkoutPlan workout={this.props.plan} />
-            <WorkoutsExercise workout={this.props.plan} />
-            <WorkoutsForm />
+            <Route path="/plans/new" component={WorkoutsForm}/>
+            <Route path="plans/:id" render = {(routerProps) => <Plan {...routerProps} workout={this.props.plan}/>}/>
+            <Route exact path="/plans" render = {(routerProps) => <WorkoutPlans {...routerProps} workout={this.props.plan}/>}/>
         </div>
         )
     }
@@ -28,7 +28,7 @@ render() {
 
 const mapStateToProps = state => {
     return {
-        plan: state
+       plan: state
         }
     }
 
