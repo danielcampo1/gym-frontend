@@ -1,5 +1,6 @@
 import React from 'react'
-import  PlansContainer from './containers/workoutContainer'
+import PlansContainer from './containers/plansContainer'
+import WorkoutsContainer from './containers/workoutsContainer'
 
 
 class App extends React.Component {
@@ -10,6 +11,7 @@ class App extends React.Component {
     return (
       <div className="App">
       <PlansContainer />
+      <WorkoutsContainer />
       </div>
     );
   }
