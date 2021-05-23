@@ -7,9 +7,9 @@ class Plans extends React.Component {
     render() {
         return(
             <div>
-                {this.props.workout.map(plan => 
+                {this.props.plan.map(plan => 
                     <li key={plan.id}> 
-                    <Link to={`/plans/${plan.id}`}> {plan.goal} </Link> 
+                    <Link to={`/plan/${plan.id}`}> {plan.goal} </Link> 
                     </li>
                         )}
             </div>
