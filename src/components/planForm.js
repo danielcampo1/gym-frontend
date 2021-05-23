@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { createPlan } from '../redux/actions/gymAction'
 
-class WorkoutsForm extends React.Component {
+class planForm extends React.Component {
 
     state = {
         goal: "",
@@ -78,4 +78,4 @@ class WorkoutsForm extends React.Component {
     }
 }
 
-export default connect (null, { createPlan })(WorkoutsForm)
+export default connect (null, { createPlan })(planForm)

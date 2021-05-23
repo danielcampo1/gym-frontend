@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-class WorkoutsPlans extends React.Component {
+class Plans extends React.Component {
 
 
     render() {
@@ -16,4 +16,4 @@ class WorkoutsPlans extends React.Component {
         )}
      }
 
-export default WorkoutsPlans
+export default Plans

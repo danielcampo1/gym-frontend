@@ -1,5 +1,5 @@
 import React from 'react'
-import  WorkoutContainer from './containers/workoutContainer'
+import  PlansContainer from './containers/workoutContainer'
 
 
 class App extends React.Component {
@@ -9,7 +9,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-      <WorkoutContainer />
+      <PlansContainer />
       </div>
     );
   }
