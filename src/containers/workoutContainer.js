@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { getPlan } from '../redux/actions/gymAction'
 import WorkoutsForm from '../components/workoutsForm'
 import WorkoutPlans from '../components/workoutPlans'
@@ -18,9 +18,11 @@ class WorkoutContainer extends React.Component {
 render() {
     return(
         <div>
+            <Switch>
             <Route path="/plans/new" component={WorkoutsForm}/>
-            <Route path="plans/:id" render = {(routerProps) => <Plan {...routerProps} workout={this.props.plan}/>}/>
-            <Route exact path="/plans" render = {(routerProps) => <WorkoutPlans {...routerProps} workout={this.props.plan}/>}/>
+            <Route path="/plan/:id" render = {(routerProps) => <Plan {...routerProps} workout={this.props.plan}/>}/>
+            <Route path="/plans" render = {(routerProps) => <WorkoutPlans {...routerProps} workout={this.props.plan}/>}/>
+            </Switch>
         </div>
         )
     }
