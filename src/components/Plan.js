@@ -1,17 +1,18 @@
 import React from 'react'
 
-const Plan = (props) => {
-    console.log(props);
+class Plan extends React.Component {
 
-    // let plan = props.workout[props.match.params.id - 1]
 
-    // console.log(plan);
-    return(
-        <li>
-            plan
-        </li>
-    )
-}
+    render() {
+
+        let plan = this.props.workout[this.props.match.params.id - 1]
+        
+        return(
+            <li>
+            { plan ? plan.goal : null}
+            </li>
+        )}
+     }
 
 
 export default Plan
