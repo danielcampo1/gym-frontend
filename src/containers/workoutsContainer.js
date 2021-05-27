@@ -8,8 +8,8 @@ class WorkoutsContainer extends React.Component {
 render() {
     return(
         <div>
-            <WorkoutForm/>
             <WorkoutExercise workout={this.props.workout && this.props.workout.workouts} />
+            <WorkoutForm workout={this.props.workout} />
         </div>
     )
 }
