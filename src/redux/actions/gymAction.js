@@ -20,3 +20,19 @@ export const createPlan = (newPlanData) => {
     .then((data) => dispatch({ type: "CREATE_PLAN_SUCCESS", payload: data }))
     }
 }   
+
+
+export const createWorkout = (workout, planId) => {
+    return(dispatch) => {
+        fetch(`http://localhost:3000/plans/${planId}/workouts`,{
+        method: "POST",
+        headers: {
+            Accepts: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({workout}),
+    })
+    .then((res) => res.json())
+    .then((workout) => console.log(dispatch({ type: "CREATE_WORKOUT_SUCCESS", payload: workout })))
+    }
+}
