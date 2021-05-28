@@ -5,7 +5,6 @@ export default (state = [], action) => {
         case "CREATE_PLAN_SUCCESS":
          return [...state, action.payload]
          case "CREATE_WORKOUT_SUCCESS":
-            debugger;
            return[...state, state.map(plan => {
              if (plan.id === action.payload.id) {
                return action.payload

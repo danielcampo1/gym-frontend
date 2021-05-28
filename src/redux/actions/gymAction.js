@@ -33,6 +33,6 @@ export const createWorkout = (workout, planId) => {
         body: JSON.stringify({workout}),
     })
     .then((res) => res.json())
-    .then((workout) => console.log(dispatch({ type: "CREATE_WORKOUT_SUCCESS", payload: workout })))
+    .then((workout) => dispatch({ type: "CREATE_WORKOUT_SUCCESS", payload: workout }))
     }
 }
