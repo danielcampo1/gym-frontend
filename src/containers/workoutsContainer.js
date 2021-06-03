@@ -10,11 +10,10 @@ render() {
         <div>
             <WorkoutExercise workout={this.props.workout && this.props.workout.workouts} />
             <WorkoutForm workout={this.props.workout} />
+
         </div>
     )
 }
-
-
 
 }
 
