@@ -7,7 +7,6 @@ import Plans from '../components/Plans'
 import Plan from '../components/Plan'
 
 
-
 class PlansContainer extends React.Component {
 
     componentDidMount(){
