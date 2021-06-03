@@ -10,8 +10,8 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Navigation/> <br/>
-      <PlansContainer />
+       <Navigation/> <br/>
+       <PlansContainer />
       </div>
     );
   }
