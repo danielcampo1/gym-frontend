@@ -7,13 +7,13 @@ export default (state = [], action) => {
          return [...state, action.payload]
          case "CREATE_WORKOUT_SUCCESS":
            let workouts = state.map(plan => {
-            if (plan.id === action.payload.id) {
-              return action.payload 
+            if (plan.id === action.payload.plan_id) {
+              return {...plan, workouts: plan.workouts.concat(action.payload)}
             } else {
               return plan
             }
           })
-           return[...state, workouts]
+           return workouts
       default:
         return state;
     }
