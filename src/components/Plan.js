@@ -1,5 +1,4 @@
 import React from 'react'
-import{ Redirect } from 'react-router-dom'
 import WorkoutContainer from '../containers/workoutsContainer'
 
 class Plan extends React.Component {
