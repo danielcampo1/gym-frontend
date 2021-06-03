@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { createPlan } from '../redux/actions/gymAction'
+import{ Redirect } from 'react-router-dom'
 
 class planForm extends React.Component {
 
@@ -16,10 +17,7 @@ class planForm extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.createPlan(this.state)
-        this.setState({  
-            goal: ""
-        })
-
+        this.props.history.push('/plans')
     }
 
     render() {
