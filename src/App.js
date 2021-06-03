@@ -1,5 +1,6 @@
 import React from 'react'
 import PlansContainer from './containers/plansContainer'
+import Navigation from './components/nav'
 
 
 class App extends React.Component {
@@ -9,6 +10,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <Navigation/> <br/>
       <PlansContainer />
       </div>
     );
