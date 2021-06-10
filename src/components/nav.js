@@ -5,7 +5,7 @@ export default class Navigation extends React.Component {
   
     render() {
       return (
-    <ul class="nav justify-content-center">
+    <ul class="nav justify-content-center nav nav-tabs" >
   <li class="nav-item">
     <Link class="nav-link active" aria-current="page" to='/home'>Home</Link>
   </li>
