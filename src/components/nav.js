@@ -5,11 +5,17 @@ export default class Navigation extends React.Component {
   
     render() {
       return (
-    <div>
-        <Link to="/home">Home</Link><br/>
-        <Link to="/plans/new">Start plan</Link><br/>
-        <Link to="/plans">All plans</Link><br/>
-    </div>
+    <ul class="nav justify-content-center">
+  <li class="nav-item">
+    <Link class="nav-link active" aria-current="page" to='/home'>Home</Link>
+  </li>
+  <li class="nav-item">
+    <Link class="nav-link" to='/plans/new'>Start a plan</Link>
+  </li>
+  <li class="nav-item">
+    <Link class="nav-link" to='/plans/'>All plans</Link>
+  </li>
+</ul>
       );
     }
   }
