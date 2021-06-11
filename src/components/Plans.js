@@ -1,16 +1,33 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import PlanAttr from './planAttr'
 
 class Plans extends React.Component {
 
+    state = {
+        count: 0
+    }
+    
+
+    handlechange =(e) => { 
+        this.setState({ [e.target.name] : parseInt(e.target.value) })
+    }
+
+    resetState = () => this.setState({ count: ''})
 
     render() {
         return(
             <div>
+                <input
+                    type='number'
+                     name = 'count'
+                     onChange = {this.handlechange}
+                     value = {this.state.count} />
+
+
                 {this.props.plan.map(plan => 
-                    <li key={plan.id}> 
-                    <Link to={`/plan/${plan.id}`}> {plan.goal} </Link> 
-                    </li>
+                    <ul key={plan.id}> 
+                    <PlanAttr plan={plan} count={this.state.count} reset={this.resetState}/>
+                    </ul>
                         )}
             </div>
         )}
