@@ -12,7 +12,7 @@ class Plan extends React.Component {
         console.log(plan);
         return(
             <div>
-            <h2>
+            <h2 class="text-center">
             { plan ? plan.goal : null}
             </h2>
             <WorkoutContainer workout={plan}/>
