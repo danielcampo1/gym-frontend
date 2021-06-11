@@ -14,7 +14,7 @@ class WorkoutAttr extends React.Component {
     render() {    
     return(
         <div>
-            {this.props.text} <button onClick={this.handleClick}> likes {this.state.likes} </button>
+            {this.props.text} <button onClick={this.handleClick} type="button" class="btn btn-outline-dark btn-sm"> likes {this.state.likes} </button>
     
         </div>
     )}
