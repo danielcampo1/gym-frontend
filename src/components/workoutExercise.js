@@ -3,26 +3,26 @@ import WorkoutAttr from './workoutAttr'
 
 class WorkoutExercise extends React.Component {
 
-    state={
-        count: 0,
-    }
+    // state={
+    //     count: 0,
+    // }
 
     handleChange =(e) => { 
         this.setState({ [e.target.name] : parseInt(e.target.value) })
     }
 
-    resetState = () => this.setState({ count: ''})
+    // resetState = () => this.setState({ count: ''})
 
     render() {
 
         return(
             <div>
-                 <input class="text-center"
+                 {/* <input class="text-center"
                     type='number'
                      name = 'count'
                      onChange = {this.handleChange}
                      value = {this.state.count}
-                     placeholder = "How Many Likes" />
+                     placeholder = "How Many Likes" /> */}
 
                  {this.props.workout && this.props.workout.map(workouts => {
         

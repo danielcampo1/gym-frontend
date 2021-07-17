@@ -17,11 +17,11 @@ class Plans extends React.Component {
     render() {
         return(
             <div>
-                <input
+                {/* <input
                     type='number'
                      name = 'count'
                      onChange = {this.handlechange}
-                     value = {this.state.count} />
+                     value = {this.state.count} /> */}
 
 
                 {this.props.plan.map(plan => 
