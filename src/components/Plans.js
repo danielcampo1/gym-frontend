@@ -17,12 +17,6 @@ class Plans extends React.Component {
     render() {
         return(
             <div>
-                {/* <input
-                    type='number'
-                     name = 'count'
-                     onChange = {this.handlechange}
-                     value = {this.state.count} /> */}
-
 
                 {this.props.plan.map(plan => 
                     <ul key={plan.id}> 
