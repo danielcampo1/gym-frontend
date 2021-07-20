@@ -18,7 +18,6 @@ class WorkoutForm extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.createWorkout(this.state, this.props.workout.id)
-    
     }
 
     render() {
