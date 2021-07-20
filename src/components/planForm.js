@@ -21,11 +21,11 @@ class planForm extends React.Component {
 
     render() {
         return(
-            <div>
-                <h1> What the plan! </h1>
+            <div class="text-center">
+                <h1> What's the plan! </h1><br/>
                 <form onSubmit = {this.handleSubmit}>
 
-                    <label for="Goal">Goal: </label> 
+                    <label for="Goal" class="fw-normal">Goal: </label> <br/>
                     <input
                     id='Goal'
                     name = 'goal'
